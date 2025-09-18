@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Horas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="logout">
+            <a href="{{ url_for('logout') }}">Cerrar sesión</a>
+        </div>
+        <h2>Hola, {{ user }} 👋</h2>
+        <form action="/submit" method="post">
+            <input type="date" name="fecha" required>
+            <input type="time" name="entrada" required placeholder="Hora de Entrada">
+            <input type="time" name="salida" required placeholder="Hora de Salida">
+            <textarea name="comentario" placeholder="Comentarios (opcional)" rows="3"></textarea>
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+</body>
+</html>
