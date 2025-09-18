@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro Exitoso</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>✅ Registro Guardado</h2>
+        <p>Gracias, {{ user }}. Tus horas han sido registradas correctamente.</p>
+        <a href="{{ url_for('dashboard') }}"><button>Volver</button></a>
+    </div>
+</body>
+</html>
